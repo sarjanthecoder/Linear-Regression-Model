@@ -37,3 +37,5 @@ input:focus { border-color: var(--primary); outline: none; }
 .result-section { margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #48bb78, #38a169); border-radius: 12px; text-align: center; }
 
 .result-value { font-size: 2.5rem; color: white; font-weight: 700; }
+
+.error-section { margin-top: 1rem; padding: 1rem; background: rgba(254,178,178,0.1); border: 1px solid #fc8181; border-radius: 12px; }
