@@ -23,3 +23,5 @@ body { background: var(--bg-gradient); min-height: 100vh; }
 h1 { font-size: 1.75rem; color: #1a202c; }
 
 .subtitle { color: #718096; font-size: 0.95rem; }
+
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
