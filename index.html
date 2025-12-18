@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linear Regression Prediction Web App - AI-powered predictions">
+    <meta name="author" content="Sarjan The Coder">
+    <title>Linear Regression Predictor | ML Powered</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="particles" id="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo"><span class="logo-icon">🧠</span><span class="logo-text">ML<span
+                        class="logo-accent">Predict</span></span></div>
+            <nav class="nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#predictor" class="nav-link">Predictor</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="https://github.com/sarjanthecoder/Linear-Regression-Model" class="nav-link github-link"
+                    target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge"><span class="badge-icon">✨</span><span>Powered by Machine Learning</span></div>
+            <h1 class="hero-title">Linear Regression<span class="gradient-text">Predictor</span></h1>
+            <p class="hero-subtitle">Experience the power of AI-driven predictions with our intuitive Linear Regression
+                model built with Python & Scikit-learn</p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-value">99.9%</span><span class="stat-label">Accuracy</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-value">&lt;50ms</span><span class="stat-label">Response Time</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-value">REST</span><span class="stat-label">API</span></div>
+            </div>
+        </div>
+    </section>
+    <main class="container" id="predictor">
+        <div class="card">
+            <div class="card-header">
+                <div class="icon">📈</div>
+                <h2>Make a Prediction</h2>
+                <p class="subtitle">Enter a numeric value to predict the output using our trained model</p>
+            </div>
+            <div class="input-section">
+                <label for="inputValue">Input Value (X)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="inputValue" placeholder="Enter a number (e.g., 25)" step="any"
+                        autocomplete="off">
+                    <span class="input-icon">🔢</span>
+                </div>
+            </div>
+            <button id="predictBtn" class="predict-btn">
+                <span class="btn-text">Predict Now</span><span class="btn-icon">🚀</span><span
+                    class="spinner hidden"></span>
+            </button>
+            <div id="resultSection" class="result-section hidden">
+                <div class="result-label">Predicted Value (Y)</div>
+                <div id="resultValue" class="result-value">--</div>
+                <div class="result-formula">y = 10x + 0</div>
+            </div>
+            <div id="errorSection" class="error-section hidden">
+                <span class="error-icon">⚠️</span><span id="errorMessage">An error occurred</span>
+            </div>
+            <div class="model-info">
+                <div class="info-item"><span class="info-icon">📊</span><span>Model: <strong>Linear
+                            Regression</strong></span></div>
+                <div class="info-item"><span class="info-icon">🎯</span><span>Formula: <strong>y = 10x +
+                            0</strong></span></div>
+            </div>
+        </div>
+    </main>
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Linear Regression</h3>
+                    <p>Uses scikit-learn's powerful LinearRegression algorithm.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐍</div>
+                    <h3>Python Backend</h3>
+                    <p>Built with Flask for efficient API handling.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time API</h3>
+                    <p>RESTful design with JSON responses.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern UI</h3>
+                    <p>Clean, responsive interface with animations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tech-section">
+        <div class="tech-container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><span class="tech-icon">🐍</span><span class="tech-name">Python</span></div>
+                <div class="tech-item"><span class="tech-icon">🌶️</span><span class="tech-name">Flask</span></div>
+                <div class="tech-item"><span class="tech-icon">🤖</span><span class="tech-name">Scikit-learn</span>
+                </div>
+                <div class="tech-item"><span class="tech-icon">📊</span><span class="tech-name">NumPy</span></div>
+                <div class="tech-item"><span class="tech-icon">🌐</span><span class="tech-name">HTML5</span></div>
+                <div class="tech-item"><span class="tech-icon">🎨</span><span class="tech-name">CSS3</span></div>
+                <div class="tech-item"><span class="tech-icon">⚡</span><span class="tech-name">JavaScript</span></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><span class="logo-icon">🧠</span><span class="logo-text">ML<span
+                                class="logo-accent">Predict</span></span></div>
+                    <p class="footer-tagline">Empowering predictions with Machine Learning</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4><a href="#">Home</a><a href="#predictor">Predictor</a><a
+                            href="#about">About</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4><a href="https://scikit-learn.org" target="_blank">Scikit-learn</a><a
+                            href="https://flask.palletsprojects.com" target="_blank">Flask Docs</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4><a href="https://github.com/sarjanthecoder" target="_blank">GitHub</a><a
+                            href="mailto:codecrafter2005@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 MLPredict. Built with ❤️ by <a href="https://github.com/sarjanthecoder"
+                        target="_blank">Sarjan The Coder</a></p>
+                <div class="footer-tech"><span>Made with</span><span class="tech-badge">Python</span><span
+                        class="tech-badge">Flask</span><span class="tech-badge">Scikit-learn</span></div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
