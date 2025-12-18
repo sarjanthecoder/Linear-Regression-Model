@@ -7,3 +7,5 @@ from flask_cors import CORS
 from sklearn.linear_model import LinearRegression
 
 import numpy as np
+
+app = Flask(__name__)
