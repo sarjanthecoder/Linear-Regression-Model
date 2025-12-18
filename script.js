@@ -31,3 +31,5 @@ predictBtn.addEventListener('click', handlePrediction);
 inputValue.addEventListener('keypress', (e) => { if (e.key === 'Enter') handlePrediction(); });
 
 document.addEventListener('DOMContentLoaded', () => inputValue.focus());
+
+console.log('Linear Regression Predictor initialized');
