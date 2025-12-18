@@ -17,3 +17,5 @@ let isLoading = false;
 function showLoading() { predictBtn.disabled = true; isLoading = true; }
 
 function hideLoading() { predictBtn.disabled = false; isLoading = false; }
+
+function showResult(prediction) { resultValue.textContent = prediction; resultSection.classList.remove('hidden'); errorSection.classList.add('hidden'); }
