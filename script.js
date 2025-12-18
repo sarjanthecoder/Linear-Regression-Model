@@ -21,3 +21,5 @@ function hideLoading() { predictBtn.disabled = false; isLoading = false; }
 function showResult(prediction) { resultValue.textContent = prediction; resultSection.classList.remove('hidden'); errorSection.classList.add('hidden'); }
 
 function showError(msg) { errorMessage.textContent = msg; errorSection.classList.remove('hidden'); resultSection.classList.add('hidden'); }
+
+async function fetchPrediction(value) { const response = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ value }) }); return response.json(); }
