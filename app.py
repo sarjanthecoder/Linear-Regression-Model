@@ -15,3 +15,5 @@ CORS(app)
 X_train = np.array([10, 20, 30, 40, 50]).reshape(-1, 1)
 
 y_train = np.array([100, 200, 300, 400, 500])
+
+model = LinearRegression()
