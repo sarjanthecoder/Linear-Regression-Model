@@ -39,3 +39,5 @@ input:focus { border-color: var(--primary); outline: none; }
 .result-value { font-size: 2.5rem; color: white; font-weight: 700; }
 
 .error-section { margin-top: 1rem; padding: 1rem; background: rgba(254,178,178,0.1); border: 1px solid #fc8181; border-radius: 12px; }
+
+.hidden { display: none !important; }
