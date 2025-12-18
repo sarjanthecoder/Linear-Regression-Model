@@ -35,3 +35,5 @@ input:focus { border-color: var(--primary); outline: none; }
 .predict-btn:hover { transform: translateY(-2px); }
 
 .result-section { margin-top: 1.5rem; padding: 1rem; background: linear-gradient(135deg, #48bb78, #38a169); border-radius: 12px; text-align: center; }
+
+.result-value { font-size: 2.5rem; color: white; font-weight: 700; }
