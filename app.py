@@ -30,3 +30,5 @@ def predict():
 @app.route('/')
 def home():
     return jsonify({'message': 'Linear Regression API', 'endpoints': {'/predict': 'POST'}})
+
+print(f'Model trained: y = {model.coef_[0]:.2f}x + {model.intercept_:.2f}')
