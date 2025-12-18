@@ -9,3 +9,5 @@ const resultSection = document.getElementById('resultSection');
 const resultValue = document.getElementById('resultValue');
 
 const errorSection = document.getElementById('errorSection');
+
+const errorMessage = document.getElementById('errorMessage');
