@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './Predictor.css'
 
-const API_URL = 'http://127.0.0.1:5000/predict'
+// Use environment variable for API URL, fallback to localhost for development
+const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000/predict'
 
 function Predictor() {
     const [inputValue, setInputValue] = useState('')
