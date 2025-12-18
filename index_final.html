@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linear Regression Prediction Web App">
+    <title>Linear Regression Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="icon">ðŸ“ˆ</div>
+                <h1>Linear Regression Predictor</h1>
+                <p class="subtitle">Enter a numeric value to predict the output</p>
+            </div>
+            <div class="input-section">
+                <label for="inputValue">Input Value (X)</label>
+                <input type="number" id="inputValue" placeholder="Enter a number">
+            </div>
+            <button id="predictBtn" class="predict-btn">Predict</button>
+            <div id="resultSection" class="result-section hidden">
+                <div class="result-label">Predicted Value (Y)</div>
+                <div id="resultValue" class="result-value">--</div>
+            </div>
+            <div id="errorSection" class="error-section hidden">
+                <span id="errorMessage">An error occurred</span>
+            </div>
+            <div class="model-info">
+                <p>Model: <strong>y = 10x + 0</strong></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
