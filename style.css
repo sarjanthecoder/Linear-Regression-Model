@@ -5,3 +5,5 @@ body { font-family: 'Inter', sans-serif; }
 html { font-size: 16px; }
 
 :root { --primary: #667eea; }
+
+:root { --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #302b63 100%); }
