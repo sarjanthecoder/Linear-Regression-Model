@@ -9,3 +9,5 @@ html { font-size: 16px; }
 :root { --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #302b63 100%); }
 
 body { background: var(--bg-gradient); min-height: 100vh; }
+
+.container { max-width: 520px; margin: 0 auto; padding: 2rem; }
