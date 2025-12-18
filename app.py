@@ -9,3 +9,5 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 
 app = Flask(__name__)
+
+CORS(app)
