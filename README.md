@@ -18,3 +18,9 @@
 ```bash
 pip install flask flask-cors scikit-learn numpy
 ```
+
+
+## Usage
+```bash
+python app.py
+```
