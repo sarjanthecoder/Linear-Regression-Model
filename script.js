@@ -7,3 +7,5 @@ const predictBtn = document.getElementById('predictBtn');
 const resultSection = document.getElementById('resultSection');
 
 const resultValue = document.getElementById('resultValue');
+
+const errorSection = document.getElementById('errorSection');
