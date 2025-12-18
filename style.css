@@ -27,3 +27,5 @@ h1 { font-size: 1.75rem; color: #1a202c; }
 label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
 
 input { width: 100%; padding: 1rem; border: 2px solid #e2e8f0; border-radius: 12px; }
+
+input:focus { border-color: var(--primary); outline: none; }
