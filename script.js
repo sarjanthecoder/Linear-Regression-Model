@@ -15,3 +15,5 @@ const errorMessage = document.getElementById('errorMessage');
 let isLoading = false;
 
 function showLoading() { predictBtn.disabled = true; isLoading = true; }
+
+function hideLoading() { predictBtn.disabled = false; isLoading = false; }
