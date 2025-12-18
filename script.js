@@ -35,3 +35,5 @@ document.addEventListener('DOMContentLoaded', () => inputValue.focus());
 console.log('Linear Regression Predictor initialized');
 
 // API endpoint: POST /predict with { value: number }
+
+// Returns: { success: true, prediction: number }
