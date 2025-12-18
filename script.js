@@ -3,3 +3,5 @@
 const inputValue = document.getElementById('inputValue');
 
 const predictBtn = document.getElementById('predictBtn');
+
+const resultSection = document.getElementById('resultSection');
