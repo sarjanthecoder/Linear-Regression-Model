@@ -11,3 +11,5 @@ import numpy as np
 app = Flask(__name__)
 
 CORS(app)
+
+X_train = np.array([10, 20, 30, 40, 50]).reshape(-1, 1)
