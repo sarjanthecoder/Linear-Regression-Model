@@ -21,3 +21,5 @@ body { background: var(--bg-gradient); min-height: 100vh; }
 .icon { font-size: 3rem; margin-bottom: 1rem; }
 
 h1 { font-size: 1.75rem; color: #1a202c; }
+
+.subtitle { color: #718096; font-size: 0.95rem; }
