@@ -28,3 +28,7 @@ python app.py
 
 ## API
 POST /predict - { value: number }
+
+
+## Author
+Sarjan The Coder - codecrafter2005@gmail.com
