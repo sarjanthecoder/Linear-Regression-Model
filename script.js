@@ -27,3 +27,5 @@ async function fetchPrediction(value) { const response = await fetch(API_URL, { 
 async function handlePrediction() { if (isLoading) return; const value = parseFloat(inputValue.value); if (isNaN(value)) { showError('Please enter a valid number'); return; } showLoading(); try { const result = await fetchPrediction(value); if (result.success) showResult(result.prediction); else showError(result.error); } catch (e) { showError('Connection failed'); } finally { hideLoading(); } }
 
 predictBtn.addEventListener('click', handlePrediction);
+
+inputValue.addEventListener('keypress', (e) => { if (e.key === 'Enter') handlePrediction(); });
