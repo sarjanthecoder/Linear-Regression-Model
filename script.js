@@ -29,3 +29,5 @@ async function handlePrediction() { if (isLoading) return; const value = parseFl
 predictBtn.addEventListener('click', handlePrediction);
 
 inputValue.addEventListener('keypress', (e) => { if (e.key === 'Enter') handlePrediction(); });
+
+document.addEventListener('DOMContentLoaded', () => inputValue.focus());
