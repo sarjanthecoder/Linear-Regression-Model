@@ -12,3 +12,9 @@
 - Linear Regression predictions
 - Modern UI
 - REST API
+
+
+## Installation
+```bash
+pip install flask flask-cors scikit-learn numpy
+```
