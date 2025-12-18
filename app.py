@@ -19,3 +19,10 @@ y_train = np.array([100, 200, 300, 400, 500])
 model = LinearRegression()
 
 model.fit(X_train, y_train)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.get_json()
+    value = data.get('value')
+    prediction = model.predict([[value]])[0]
+    return jsonify({'success': True, 'input': value, 'prediction': round(prediction, 2)})
