@@ -23,3 +23,5 @@ function showResult(prediction) { resultValue.textContent = prediction; resultSe
 function showError(msg) { errorMessage.textContent = msg; errorSection.classList.remove('hidden'); resultSection.classList.add('hidden'); }
 
 async function fetchPrediction(value) { const response = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ value }) }); return response.json(); }
+
+async function handlePrediction() { if (isLoading) return; const value = parseFloat(inputValue.value); if (isNaN(value)) { showError('Please enter a valid number'); return; } showLoading(); try { const result = await fetchPrediction(value); if (result.success) showResult(result.prediction); else showError(result.error); } catch (e) { showError('Connection failed'); } finally { hideLoading(); } }
