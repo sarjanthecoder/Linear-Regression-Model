@@ -33,3 +33,5 @@ inputValue.addEventListener('keypress', (e) => { if (e.key === 'Enter') handlePr
 document.addEventListener('DOMContentLoaded', () => inputValue.focus());
 
 console.log('Linear Regression Predictor initialized');
+
+// API endpoint: POST /predict with { value: number }
