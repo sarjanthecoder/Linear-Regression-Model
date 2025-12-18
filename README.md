@@ -24,3 +24,7 @@ pip install flask flask-cors scikit-learn numpy
 ```bash
 python app.py
 ```
+
+
+## API
+POST /predict - { value: number }
