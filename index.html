@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Linear Regression Prediction Web App - Enter a value and get AI-powered predictions using Machine Learning">
+    <meta name="keywords" content="Linear Regression, Machine Learning, AI, Prediction, Python, Flask">
+    <meta name="author" content="Sarjan The Coder">
+    <title>Linear Regression Predictor | ML Powered</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter & Poppins for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ============================================================
+         Animated Background Particles
+         ============================================================ -->
+    <div class="particles" id="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- ============================================================
+         Header - Navigation & Branding
+         ============================================================ -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo & Brand -->
+            <div class="logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">ML<span class="logo-accent">Predict</span></span>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#predictor" class="nav-link">Predictor</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="https://github.com/sarjanthecoder/Linear-Regression-Model" class="nav-link github-link"
+                    target="_blank">
+                    <svg class="github-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor"
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         Hero Section
+         ============================================================ -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">✨</span>
+                <span>Powered by Machine Learning</span>
+            </div>
+            <h1 class="hero-title">
+                Linear Regression
+                <span class="gradient-text">Predictor</span>
+            </h1>
+            <p class="hero-subtitle">
+                Experience the power of AI-driven predictions with our intuitive
+                Linear Regression model built with Python & Scikit-learn
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">99.9%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">&lt;50ms</span>
+                    <span class="stat-label">Response Time</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">REST</span>
+                    <span class="stat-label">API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         Main Container - Prediction Card
+         ============================================================ -->
+    <main class="container" id="predictor">
+        <!-- Prediction Card -->
+        <div class="card">
+            <!-- Card Header Section -->
+            <div class="card-header">
+                <div class="icon">📈</div>
+                <h2>Make a Prediction</h2>
+                <p class="subtitle">Enter a numeric value to predict the output using our trained model</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <label for="inputValue">Input Value (X)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="inputValue" placeholder="Enter a number (e.g., 25)" step="any"
+                        autocomplete="off">
+                    <span class="input-icon">🔢</span>
+                </div>
+            </div>
+
+            <!-- Predict Button -->
+            <button id="predictBtn" class="predict-btn">
+                <span class="btn-text">Predict Now</span>
+                <span class="btn-icon">🚀</span>
+                <!-- Loading spinner (hidden by default) -->
+                <span class="spinner hidden"></span>
+            </button>
+
+            <!-- Result Section (hidden by default) -->
+            <div id="resultSection" class="result-section hidden">
+                <div class="result-label">Predicted Value (Y)</div>
+                <div id="resultValue" class="result-value">--</div>
+                <div class="result-formula">y = 10x + 0</div>
+            </div>
+
+            <!-- Error Section (hidden by default) -->
+            <div id="errorSection" class="error-section hidden">
+                <span class="error-icon">⚠️</span>
+                <span id="errorMessage">An error occurred</span>
+            </div>
+
+            <!-- Model Info Footer -->
+            <div class="model-info">
+                <div class="info-item">
+                    <span class="info-icon">📊</span>
+                    <span>Model: <strong>Linear Regression</strong></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🎯</span>
+                    <span>Formula: <strong>y = 10x + 0</strong></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📚</span>
+                    <span>Training: <strong>X=[10,20,30,40,50]</strong></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================================
+         About Section
+         ============================================================ -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Linear Regression</h3>
+                    <p>Uses scikit-learn's powerful LinearRegression algorithm to find the best-fit line through
+                        training data.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐍</div>
+                    <h3>Python Backend</h3>
+                    <p>Built with Flask, a lightweight Python web framework that handles API requests efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time API</h3>
+                    <p>RESTful API design with JSON responses for seamless integration and fast predictions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern UI</h3>
+                    <p>Clean, responsive interface built with vanilla JavaScript and stunning CSS animations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         Tech Stack Section
+         ============================================================ -->
+    <section class="tech-section">
+        <div class="tech-container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span class="tech-icon">🐍</span>
+                    <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🌶️</span>
+                    <span class="tech-name">Flask</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🤖</span>
+                    <span class="tech-name">Scikit-learn</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">📊</span>
+                    <span class="tech-name">NumPy</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🌐</span>
+                    <span class="tech-name">HTML5</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🎨</span>
+                    <span class="tech-name">CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">⚡</span>
+                    <span class="tech-name">JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🔗</span>
+                    <span class="tech-name">REST API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         Footer
+         ============================================================ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🧠</span>
+                        <span class="logo-text">ML<span class="logo-accent">Predict</span></span>
+                    </div>
+                    <p class="footer-tagline">Empowering predictions with Machine Learning</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <a href="#">Home</a>
+                        <a href="#predictor">Predictor</a>
+                        <a href="#about">About</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <a href="https://scikit-learn.org" target="_blank">Scikit-learn</a>
+                        <a href="https://flask.palletsprojects.com" target="_blank">Flask Docs</a>
+                        <a href="https://github.com/sarjanthecoder/Linear-Regression-Model" target="_blank">GitHub
+                            Repo</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/sarjanthecoder" target="_blank">GitHub</a>
+                        <a href="mailto:codecrafter2005@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © 2024 MLPredict. Built with ❤️ by
+                    <a href="https://github.com/sarjanthecoder" target="_blank">Sarjan The Coder</a>
+                </p>
+                <div class="footer-tech">
+                    <span>Made with</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
