@@ -26,3 +26,7 @@ def predict():
     value = data.get('value')
     prediction = model.predict([[value]])[0]
     return jsonify({'success': True, 'input': value, 'prediction': round(prediction, 2)})
+
+@app.route('/')
+def home():
+    return jsonify({'message': 'Linear Regression API', 'endpoints': {'/predict': 'POST'}})
