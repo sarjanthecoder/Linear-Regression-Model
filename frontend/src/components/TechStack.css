@@ -1,0 +1,43 @@
+.tech-section {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    position: relative;
+    z-index: 1;
+}
+
+.tech-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.tech-icon {
+    font-size: 1.5rem;
+}
+
+.tech-name {
+    font-weight: 500;
+    color: #fff;
+}
