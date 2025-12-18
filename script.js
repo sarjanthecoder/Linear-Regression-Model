@@ -11,3 +11,5 @@ const resultValue = document.getElementById('resultValue');
 const errorSection = document.getElementById('errorSection');
 
 const errorMessage = document.getElementById('errorMessage');
+
+let isLoading = false;
