@@ -8,12 +8,12 @@ app = Flask(__name__)
 CORS(app)
 
 # Training data
-X_train = np.array([10, 20, 30, 40, 50]).reshape(-1, 1)
-y_train = np.array([100, 200, 300, 400, 500])
+X = np.array([10, 20, 30, 40, 50]).reshape(-1, 1)
+y = np.array([100, 200, 300, 400, 500])
 
 # Train model
 model = LinearRegression()
-model.fit(X_train, y_train)
+model.fit(X,y)
 print(f"Model trained: y = {model.coef_[0]:.2f}x + {model.intercept_:.2f}")
 
 @app.route('/')
